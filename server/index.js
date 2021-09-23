@@ -5,6 +5,10 @@ const app = express()
 
 console.log(__dirname)
 
+app.use(express.static("client"));
+
+
+
 app.get('/', (req, res) => {
  res.sendFile(path.join(__dirname, '../index.html'))
 })
